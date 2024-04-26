@@ -17,7 +17,9 @@ export default function Home() {
       <main>
         <header></header>
       </main>
-      <footer></footer>
+      <footer className="fixed bottom-0 flex w-screen place-items-center">
+        <p>© Radosław Głogowski 2024</p>
+      </footer>
     </>
   );
 }
