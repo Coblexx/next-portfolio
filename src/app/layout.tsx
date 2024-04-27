@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 };
 
 // components
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
+import NavBar from "@/ui/NavBar";
+import Footer from "@/ui/Footer";
 
 export default function RootLayout({
   children,

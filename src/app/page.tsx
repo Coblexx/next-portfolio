@@ -1,6 +1,5 @@
-import HeroSection from "@/components/HeroSection";
-import Slider from "@/components/Slider";
-import "./globals.css";
+import HeroSection from "@/ui/HeroSection";
+import Slider from "@/ui/Slider";
 
 export default function Home() {
   return (

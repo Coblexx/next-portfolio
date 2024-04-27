@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ReactNode } from "react";
 
-type Props = {
+type NavItemProps = {
   children?: ReactNode;
   href: string;
 };
@@ -10,19 +10,19 @@ export default function NavBar() {
   return (
     <nav className="flex h-24 place-items-center justify-around ">
       <div className="text-xl">
-        <NavItem href="#">Hi I'm XYZ</NavItem>
+        <NavItem href="/">Hi I'm Radosław</NavItem>
       </div>
       <div className="hidden sm:flex">
-        <NavItem href="#section-aboutme">About Me</NavItem>
-        <NavItem href="#section-projects">Projects</NavItem>
-        <NavItem href="#section-skills">Skills</NavItem>
-        <NavItem href="#section-contact">Contact</NavItem>
+        <NavItem href="/">About Me</NavItem>
+        <NavItem href="projects">Projects</NavItem>
+        <NavItem href="skills">Skills</NavItem>
+        <NavItem href="contact">Contact</NavItem>
       </div>
     </nav>
   );
 }
 
-function NavItem({ children, href }: Props) {
+function NavItem({ children, href }: NavItemProps) {
   return (
     <Link href={href} className="p-10">
       {children}
