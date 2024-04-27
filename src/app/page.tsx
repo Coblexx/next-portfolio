@@ -1,12 +1,12 @@
 import HeroSection from "@/components/HeroSection";
-import Footer from "@/components/Footer";
+import Slider from "@/components/Slider";
 import "./globals.css";
 
 export default function Home() {
   return (
     <>
       <HeroSection />
-      <Footer />
+      <Slider />
     </>
   );
 }
