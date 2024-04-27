@@ -4,7 +4,7 @@ export default function HeroSection() {
       <div>
         <div className=" bg-fill flex h-72 flex-col items-center justify-around bg-hero bg-cover bg-center bg-no-repeat p-10 text-center">
           <h2></h2>
-          <h1 className="text-4xl">Radosław Głogowski</h1>
+          <h1 className="text-4xl font-semibold">Radosław Głogowski</h1>
           <h2>
             I am at the beginning of my journey to become a front end developer!
           </h2>

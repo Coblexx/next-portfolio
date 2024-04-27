@@ -1,11 +1,5 @@
-import HeroSection from "@/ui/HeroSection";
-import Slider from "@/ui/Slider";
+import { redirect } from "next/navigation";
 
-export default function Home() {
-  return (
-    <>
-      <HeroSection />
-      <Slider />
-    </>
-  );
+export default function Main() {
+  redirect("/home");
 }

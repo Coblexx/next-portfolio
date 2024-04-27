@@ -8,19 +8,16 @@ import { ReactNode } from "react";
 import { clsx } from "clsx";
 import { usePathname } from "next/navigation";
 
-type NavItemProps = {
-  children?: ReactNode;
-  href: string;
-};
-
 export default function NavBar() {
   return (
     <nav className="flex h-24 place-items-center justify-around ">
       <div className="text-xl">
-        <NavItem href="/">Hi I'm Radosław</NavItem>
+        <NavItem href="home" underline={false}>
+          Hi I'm Radosław
+        </NavItem>
       </div>
       <div className="hidden sm:flex">
-        <NavItem href="/">About Me</NavItem>
+        <NavItem href="home">About Me</NavItem>
         <NavItem href="projects">Projects</NavItem>
         <NavItem href="skills">Skills</NavItem>
         <NavItem href="contact">Contact</NavItem>
@@ -29,7 +26,15 @@ export default function NavBar() {
   );
 }
 
-function NavItem({ children, href }: NavItemProps) {
+function NavItem({
+  children,
+  href,
+  underline = true,
+}: {
+  children?: ReactNode;
+  href: string;
+  underline?: boolean;
+}) {
   const path = usePathname();
 
   return (
@@ -37,7 +42,7 @@ function NavItem({ children, href }: NavItemProps) {
       href={href}
       className={clsx(
         "p-10",
-        path === `/${href}` && "underline underline-offset-[10px]",
+        path === `/${href}` && underline && "underline underline-offset-[10px]",
       )}
     >
       {children}
