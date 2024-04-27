@@ -13,9 +13,7 @@ export default function NavBar() {
         <NavItem href="/">Hi I'm Radosław</NavItem>
       </div>
       <NavLinks />
-      <div className="flex md:hidden">
-        <HamburgerMenu />
-      </div>
+      <HamburgerMenu />
     </nav>
   );
 }

@@ -13,14 +13,16 @@ export default function NavItem({
   const path = usePathname();
 
   return (
-    <Link
-      href={href}
-      className={clsx(
-        "p-10",
-        path === `/${href}` && "underline underline-offset-[10px]",
-      )}
-    >
-      {children}
-    </Link>
+    <li>
+      <Link
+        href={href}
+        className={clsx(
+          "p-10",
+          path === `/${href}` && "underline underline-offset-[10px]",
+        )}
+      >
+        {children}
+      </Link>
+    </li>
   );
 }

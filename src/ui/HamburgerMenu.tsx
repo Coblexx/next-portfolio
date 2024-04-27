@@ -1,9 +1,5 @@
 // next
-import Link from "next/link";
 import { useState } from "react";
-
-// clsx
-// import clsx from "clsx";
 
 // react-icons
 import { FiMenu } from "react-icons/fi";
@@ -15,15 +11,17 @@ export default function HamburgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="absolute">
-      <button
-        className="px-10"
-        onClick={() => {
-          setIsOpen((open) => !open);
-        }}
-      >
-        <FiMenu className="h-10" />
-      </button>
+    <div className="right-0">
+      <div>
+        <button
+          className="px-10"
+          onClick={() => {
+            setIsOpen((open) => !open);
+          }}
+        >
+          <FiMenu className="h-10" />
+        </button>
+      </div>
       <NavLinks isOpen={isOpen} />
     </div>
   );
