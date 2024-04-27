@@ -12,6 +12,12 @@ const config: Config = {
         hero: "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/bg-img.jpg')",
       },
     },
+    keyframes: {
+      rotate90: {
+        "0%": { transform: "rotate(0deg)" },
+        "100%": { transform: "rotate(-90deg)" },
+      },
+    },
   },
   plugins: [],
 };
