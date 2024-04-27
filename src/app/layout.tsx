@@ -4,13 +4,13 @@ import { Sora } from "next/font/google";
 
 const sora = Sora({ subsets: ["latin"] });
 
-// css
-import "./globals.css";
-
 export const metadata: Metadata = {
   title: "My portfolio",
   description: "New portfolio created using NextJS",
 };
+
+// css
+import "./globals.css";
 
 // components
 import NavBar from "@/ui/NavBar";
