@@ -1,5 +1,12 @@
+"use client";
+
+// next
 import Link from "next/link";
 import { ReactNode } from "react";
+
+//clsx
+import { clsx } from "clsx";
+import { usePathname } from "next/navigation";
 
 type NavItemProps = {
   children?: ReactNode;
@@ -23,8 +30,16 @@ export default function NavBar() {
 }
 
 function NavItem({ children, href }: NavItemProps) {
+  const path = usePathname();
+
   return (
-    <Link href={href} className="p-10">
+    <Link
+      href={href}
+      className={clsx(
+        "p-10",
+        path === `/${href}` && "underline underline-offset-[10px]",
+      )}
+    >
       {children}
     </Link>
   );
