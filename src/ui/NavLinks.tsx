@@ -8,7 +8,7 @@ export default function NavLinks({ isOpen }: { isOpen?: boolean }) {
       className={clsx(
         "gap-2 md:flex",
         !isOpen && "hidden",
-        isOpen && " flex flex-col",
+        isOpen && "flex flex-col gap-4 py-6",
       )}
     >
       <NavItem href="home">About Me</NavItem>

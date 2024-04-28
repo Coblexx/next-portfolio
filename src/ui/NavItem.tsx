@@ -13,11 +13,11 @@ export default function NavItem({
   const path = usePathname();
 
   return (
-    <li>
+    <li className="py-3">
       <Link
         href={href}
         className={clsx(
-          "p-10",
+          "h-fit px-10",
           path === `/${href}` && "underline underline-offset-[10px]",
         )}
       >

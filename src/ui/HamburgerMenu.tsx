@@ -1,24 +1,22 @@
 // next
-import { useState } from "react";
+import { ReactEventHandler, useState } from "react";
 
 // react-icons
 import { FiMenu } from "react-icons/fi";
 
 // components
-// import NavLinks from "@/ui/NavLinks";
 import clsx from "clsx";
 
-export default function HamburgerMenu() {
-  const [isOpen, setIsOpen] = useState(false);
-
+export default function HamburgerMenu({
+  handleClick,
+  isOpen,
+}: {
+  handleClick: ReactEventHandler;
+  isOpen: boolean;
+}) {
   return (
     <div className="absolute right-0">
-      <button
-        className="p-10"
-        onClick={() => {
-          setIsOpen((open) => !open);
-        }}
-      >
+      <button className="p-10" onClick={handleClick}>
         <FiMenu
           className={clsx(isOpen && "rotate-90 animate-[rotate90_0.5s]")}
           size={30}
