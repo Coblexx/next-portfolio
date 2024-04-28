@@ -27,13 +27,3 @@ export default function HamburgerMenu() {
     </div>
   );
 }
-
-function HamburgerOptions({ isOpen }: { isOpen: boolean }) {
-  return (
-    <div
-      className={clsx(isOpen && "absolute right-0 top-20 h-10 w-full bg-black")}
-    >
-      {/* <NavLinks isOpen={isOpen} /> */}
-    </div>
-  );
-}

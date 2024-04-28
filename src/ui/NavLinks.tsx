@@ -6,7 +6,7 @@ export default function NavLinks({ isOpen }: { isOpen?: boolean }) {
   return (
     <ul
       className={clsx(
-        "md:flex",
+        "gap-2 md:flex",
         !isOpen && "hidden",
         isOpen && " flex flex-col",
       )}
