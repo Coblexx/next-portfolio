@@ -6,22 +6,31 @@ import { ReactNode } from "react";
 export default function NavItem({
   children,
   href,
+  handleClick,
+  isOpen,
 }: {
   children?: ReactNode;
   href: string;
+  handleClick: Function;
+  isOpen: boolean;
 }) {
   const path = usePathname();
 
+  function handleClickRoute(e: React.MouseEvent): void {
+    e.stopPropagation();
+    handleClick();
+  }
+
   return (
-    <li className="py-3">
+    <li>
       <Link
         href={href}
+        onClick={(e: React.MouseEvent) => handleClickRoute(e)}
         className={clsx(
-          "h-fit px-10",
           path === `/${href}` && "underline underline-offset-[10px]",
         )}
       >
-        {children}
+        <div className={clsx("px-10", isOpen && "w-full py-3")}>{children}</div>
       </Link>
     </li>
   );

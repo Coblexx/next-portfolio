@@ -1,6 +1,4 @@
 // next
-import { ReactEventHandler, useState } from "react";
-
 // react-icons
 import { FiMenu } from "react-icons/fi";
 
@@ -11,11 +9,14 @@ export default function HamburgerMenu({
   handleClick,
   isOpen,
 }: {
-  handleClick: ReactEventHandler;
+  handleClick: Function;
   isOpen: boolean;
 }) {
   return (
-    <button className="absolute right-0 p-8 md:hidden" onClick={handleClick}>
+    <button
+      className="absolute right-0 p-8 md:hidden"
+      onClick={() => handleClick()}
+    >
       <FiMenu
         className={clsx(isOpen && "rotate-90 animate-[rotate90_0.5s]")}
         size={30}

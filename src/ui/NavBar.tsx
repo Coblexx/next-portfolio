@@ -17,9 +17,11 @@ export default function NavBar() {
   return (
     <nav className="z-0 flex h-24 place-items-center justify-between">
       <div className="text-xl">
-        <NavItem href="/">Hi I'm Radosław</NavItem>
+        <NavItem isOpen={false} handleClick={() => null} href="/">
+          Hi I'm Radosław
+        </NavItem>
       </div>
-      <NavLinks handleClick={handleClick} />
+      <NavLinks isOpen={false} handleClick={handleClick} />
       <HamburgerMenu isOpen={isOpen} handleClick={handleClick} />
       <HamburgerOptions isOpen={isOpen} handleClick={handleClick} />
     </nav>

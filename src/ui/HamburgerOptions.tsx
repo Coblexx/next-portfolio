@@ -3,14 +3,13 @@ import clsx from "clsx";
 
 // components
 import NavLinks from "./NavLinks";
-import { ReactEventHandler } from "react";
 
 export default function HamburgerOptions({
   isOpen,
   handleClick,
 }: {
-  isOpen?: boolean;
-  handleClick?: ReactEventHandler;
+  isOpen: boolean;
+  handleClick: Function;
 }) {
   return (
     <div

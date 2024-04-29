@@ -1,28 +1,37 @@
-import { ReactEventHandler } from "react";
+// clsx
+import clsx from "clsx";
+
+// components
 import NavItem from "./NavItem";
 
-import clsx from "clsx";
+//data
+import routes from "../routes.json";
 
 export default function NavLinks({
   isOpen,
   handleClick,
 }: {
-  isOpen?: boolean;
-  handleClick?: ReactEventHandler;
+  isOpen: boolean;
+  handleClick: Function;
 }) {
   return (
     <ul
       className={clsx(
         "gap-2 md:flex",
         !isOpen && "hidden",
-        isOpen && "flex flex-col gap-4",
+        isOpen && "flex w-full flex-col gap-6 py-6",
       )}
-      onClick={handleClick}
     >
-      <NavItem href="home">About Me</NavItem>
-      <NavItem href="projects">Projects</NavItem>
-      <NavItem href="skills">Skills</NavItem>
-      <NavItem href="contact">Contact</NavItem>
+      {Object.entries(routes).map(([route, title]) => (
+        <NavItem
+          handleClick={() => isOpen && handleClick()}
+          key={route}
+          href={route}
+          isOpen={isOpen}
+        >
+          {title}
+        </NavItem>
+      ))}
     </ul>
   );
 }
