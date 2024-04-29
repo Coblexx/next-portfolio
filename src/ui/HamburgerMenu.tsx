@@ -15,13 +15,11 @@ export default function HamburgerMenu({
   isOpen: boolean;
 }) {
   return (
-    <div className="absolute right-0">
-      <button className="p-10" onClick={handleClick}>
-        <FiMenu
-          className={clsx(isOpen && "rotate-90 animate-[rotate90_0.5s]")}
-          size={30}
-        />
-      </button>
-    </div>
+    <button className="absolute right-0 p-8 md:hidden" onClick={handleClick}>
+      <FiMenu
+        className={clsx(isOpen && "rotate-90 animate-[rotate90_0.5s]")}
+        size={30}
+      />
+    </button>
   );
 }

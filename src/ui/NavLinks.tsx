@@ -1,15 +1,23 @@
+import { ReactEventHandler } from "react";
 import NavItem from "./NavItem";
 
 import clsx from "clsx";
 
-export default function NavLinks({ isOpen }: { isOpen?: boolean }) {
+export default function NavLinks({
+  isOpen,
+  handleClick,
+}: {
+  isOpen?: boolean;
+  handleClick?: ReactEventHandler;
+}) {
   return (
     <ul
       className={clsx(
         "gap-2 md:flex",
         !isOpen && "hidden",
-        isOpen && "flex flex-col gap-4 py-6",
+        isOpen && "flex flex-col gap-4",
       )}
+      onClick={handleClick}
     >
       <NavItem href="home">About Me</NavItem>
       <NavItem href="projects">Projects</NavItem>
