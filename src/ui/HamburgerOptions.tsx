@@ -13,9 +13,7 @@ export default function HamburgerOptions({
 }) {
   return (
     <div
-      className={clsx(
-        isOpen && "absolute top-24 z-10 h-fit w-full bg-[#141414]",
-      )}
+      className={clsx(isOpen && "absolute top-24 h-fit w-screen bg-[#141414]")}
     >
       {isOpen && <NavLinks isOpen={isOpen} handleClick={handleClick} />}
     </div>

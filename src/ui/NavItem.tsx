@@ -9,7 +9,7 @@ export default function NavItem({
   handleClick,
   isOpen,
 }: {
-  children?: ReactNode;
+  children: ReactNode;
   href: string;
   handleClick: Function;
   isOpen: boolean;
@@ -22,7 +22,7 @@ export default function NavItem({
   }
 
   return (
-    <li>
+    <li className="flex h-full items-center">
       <Link
         href={href}
         onClick={(e: React.MouseEvent) => handleClickRoute(e)}
@@ -30,7 +30,9 @@ export default function NavItem({
           path === `/${href}` && "underline underline-offset-[10px]",
         )}
       >
-        <div className={clsx("px-10", isOpen && "w-full py-3")}>{children}</div>
+        <div className={clsx("px-10", isOpen && "w-full py-3 text-lg")}>
+          {children}
+        </div>
       </Link>
     </li>
   );

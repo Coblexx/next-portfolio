@@ -17,7 +17,7 @@ export default function NavLinks({
   return (
     <ul
       className={clsx(
-        "gap-2 md:flex",
+        "h-full gap-5 md:flex",
         !isOpen && "hidden",
         isOpen && "flex w-full flex-col gap-6 py-6",
       )}

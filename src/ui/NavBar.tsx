@@ -15,13 +15,15 @@ export default function NavBar() {
   }
 
   return (
-    <nav className="z-0 flex h-24 place-items-center justify-between">
+    <nav className="flex h-24 justify-between">
       <div className="text-xl">
         <NavItem isOpen={false} handleClick={() => null} href="/">
           Hi I'm Radosław
         </NavItem>
       </div>
-      <NavLinks isOpen={false} handleClick={handleClick} />
+      <div>
+        <NavLinks isOpen={false} handleClick={handleClick} />
+      </div>
       <HamburgerMenu isOpen={isOpen} handleClick={handleClick} />
       <HamburgerOptions isOpen={isOpen} handleClick={handleClick} />
     </nav>
