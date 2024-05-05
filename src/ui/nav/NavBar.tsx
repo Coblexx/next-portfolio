@@ -1,11 +1,13 @@
 "use client";
 
-// components
-import HamburgerMenu from "@/ui/HamburgerMenu";
-import HamburgerOptions from "@/ui/HamburgerOptions";
-import NavItem from "@/ui/NavItem";
-import NavLinks from "@/ui/NavLinks";
+// react
 import { useState } from "react";
+
+// components
+import HamburgerMenu from "@/ui/nav/HamburgerMenu";
+import HamburgerOptions from "@/ui/nav/HamburgerOptions";
+import NavItem from "@/ui/nav/NavItem";
+import NavLinks from "@/ui/nav/NavLinks";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,12 +18,12 @@ export default function NavBar() {
 
   return (
     <nav className="flex h-24 justify-between">
-      <div className="text-xl">
-        <NavItem isOpen={false} handleClick={() => null} href="/">
+      <div>
+        <NavItem isOpen={false} handleClick={() => setIsOpen(false)} href="/">
           Hi I'm Radosław
         </NavItem>
       </div>
-      <div>
+      <div className="flex grow justify-end">
         <NavLinks isOpen={false} handleClick={handleClick} />
       </div>
       <HamburgerMenu isOpen={isOpen} handleClick={handleClick} />

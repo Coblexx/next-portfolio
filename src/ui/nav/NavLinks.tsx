@@ -5,7 +5,7 @@ import clsx from "clsx";
 import NavItem from "./NavItem";
 
 //data
-import routes from "../routes.json";
+import routes from "../../routes.json";
 
 export default function NavLinks({
   isOpen,

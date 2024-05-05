@@ -30,7 +30,7 @@ export default function NavItem({
           path === `/${href}` && "underline underline-offset-[10px]",
         )}
       >
-        <div className={clsx("px-10", isOpen && "w-full py-3 text-lg")}>
+        <div className={clsx("px-10 py-3", isOpen && "w-full  text-lg")}>
           {children}
         </div>
       </Link>

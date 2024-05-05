@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 import "./globals.css";
 
 // components
-import NavBar from "@/ui/NavBar";
+import NavBar from "@/ui/nav/NavBar";
 import Footer from "@/ui/Footer";
 
 export default function RootLayout({
