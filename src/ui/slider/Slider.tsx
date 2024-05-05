@@ -26,18 +26,20 @@ export default function Slider() {
   }
 
   return (
-    <div>
+    <div className="flex h-fit justify-center">
+      <div className="w-3/5">
+        <SliderItem title={title} desc={desc} link={link} />
+      </div>
       <button
+        className="absolute left-0"
         onClick={() => {
           handleSlideChange(true);
         }}
       >
         <FiArrowLeft size={40} />
       </button>
-      <div>
-        <SliderItem title={title} desc={desc} link={link} />
-      </div>
       <button
+        className="absolute right-0"
         onClick={() => {
           handleSlideChange();
         }}
