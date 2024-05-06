@@ -1,14 +1,17 @@
 {
   "Portfolio": {
     "link": "https://github.com/Coblexx/coblexx.github.io",
-    "desc": "A static website Created by me to showcase my projects. It was built using pure HTML, CSS and JavaScript! You can check it out on github by clicking the link below:"
+    "desc": "A static website Created by me to showcase my projects. It was built using pure HTML, CSS and JavaScript! You can check it out on github by clicking the link below.",
+    "stack": ["HTML", "CSS", "JavaScript"]
   },
   "NextPortfolio": {
     "link": "https://github.com/Coblexx/next-portfolio",
-    "desc": "A recreation of my portfolio site using new technologies, such as: NextJS and TypeScript!"
+    "desc": "A recreation of my portfolio site using new technologies, such as: NextJS and TypeScript!",
+    "stack": ["NextJS", "React", "TypeScript", "Tailwind"]
   },
   "LiveCommerce": {
     "link": "",
-    "desc": "Currently in progress, me along with 6 people are currently working on a Live commerce platform, where shops and creators can showcase and sell their products live! With another team member, I'm responsible for the frontend part. (Repo coming soon)"
+    "desc": "Currently in progress, me along with 6 people are currently working on a Live commerce platform, where shops and creators can showcase and sell their products live! With another team member, I'm responsible for the frontend part. (Repo coming soon)",
+    "stack": ["React", "Tailwind", "DaisyUI"]
   }
 }

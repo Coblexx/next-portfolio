@@ -15,7 +15,7 @@ export default function Slider() {
   const [currSlide, setCurrSlide] = useState(0);
 
   const slides = Object.entries(slidesData);
-  const [title, { desc, link }] = slides[currSlide];
+  const slide = slides[currSlide];
 
   function handleSlideChange(prev = false) {
     if (!prev) {
@@ -36,7 +36,7 @@ export default function Slider() {
         <FiArrowLeft size={40} />
       </button>
       <div className="w-3/5 align-top">
-        <SliderItem title={title} desc={desc} link={link} />
+        <SliderItem slide={slide} />
       </div>
       <button
         className="m-6 my-auto"
