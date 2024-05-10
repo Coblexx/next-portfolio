@@ -6,13 +6,13 @@ import TextBlock from "@/ui/TextBlock";
 import about from "@/about.json";
 
 export default function HomePage() {
+  const { title, text } = about;
+
   return (
     <>
       <HeroSection />
       <div className="flex flex-col">
-        {Object.entries(about).map((text: string[]) => (
-          <TextBlock content={text} />
-        ))}
+        <TextBlock title={title} text={text} />
       </div>
     </>
   );

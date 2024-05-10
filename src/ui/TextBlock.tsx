@@ -1,6 +1,10 @@
-export default function TextBlock({ content }: { content: string[] }) {
-  const [title, text] = content;
-
+export default function TextBlock({
+  title,
+  text,
+}: {
+  title: string;
+  text: string;
+}) {
   return (
     <div className="p-6">
       <p className="py-2 text-xl">{title}</p>
