@@ -6,7 +6,7 @@ export default function TextBlock({
   text: string;
 }) {
   return (
-    <div className="p-6">
+    <div className="max-w-96 p-6 md:max-w-none">
       <p className="py-2 text-xl">{title}</p>
       <p>{text}</p>
     </div>

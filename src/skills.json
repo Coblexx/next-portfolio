@@ -1,0 +1,22 @@
+[
+  {
+    "id": 0,
+    "title": "JavaScript ☕",
+    "text": " My first language of choice! I learn by myself to become a full fledged frontend developer! I first started my adventure with JavaScript language back in highschool, where I learned how to create simple websites."
+  },
+  {
+    "id": 1,
+    "title": "HTML & CSS 🛠️",
+    "text": "I began my journey with HTML and CSS to create simple websites back in highschool, where I enrolled in IT technician profile. That kickstarted my interest in web development."
+  },
+  {
+    "id": 2,
+    "title": "React 🚀",
+    "text": "React is the first framework I have chosen to learn. I am still a beginner, but I strive for knowledge and make progress everyday!"
+  },
+  {
+    "id": 3,
+    "title": "Other 🌟",
+    "text": "In the meantime I also learned many useful skill, such as: Figma, where I created my first user interface! I also posses diverse range of soft skills, such as: strong teamwork, communication and curiosity that drives me to achieve my dreams!"
+  }
+]
