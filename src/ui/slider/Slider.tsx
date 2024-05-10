@@ -1,15 +1,17 @@
 "use client";
 
-// components
-import SliderItem from "./SliderItem";
+// react
+import { useState } from "react";
 
 // icons
 import { FiArrowRight } from "react-icons/fi";
 import { FiArrowLeft } from "react-icons/fi";
 
+// components
+import SliderItem from "./SliderItem";
+
 // data
 import slidesData from "@/slides.json";
-import { useState } from "react";
 
 export default function Slider() {
   const [currSlide, setCurrSlide] = useState(0);
@@ -26,26 +28,28 @@ export default function Slider() {
   }
 
   return (
-    <div className="flex h-60 justify-between">
-      <button
-        className="m-6 my-auto"
-        onClick={() => {
-          handleSlideChange(true);
-        }}
-      >
-        <FiArrowLeft size={40} />
-      </button>
-      <div className="w-3/5 align-top">
-        <SliderItem slide={slide} />
+    <>
+      <div className="flex h-60 justify-between">
+        <button
+          className="m-6 my-auto"
+          onClick={() => {
+            handleSlideChange(true);
+          }}
+        >
+          <FiArrowLeft size={40} />
+        </button>
+        <div className="w-3/5 align-top">
+          <SliderItem slide={slide} />
+        </div>
+        <button
+          className="m-6 my-auto"
+          onClick={() => {
+            handleSlideChange();
+          }}
+        >
+          <FiArrowRight size={40} />
+        </button>
       </div>
-      <button
-        className="m-6 my-auto"
-        onClick={() => {
-          handleSlideChange();
-        }}
-      >
-        <FiArrowRight size={40} />
-      </button>
-    </div>
+    </>
   );
 }

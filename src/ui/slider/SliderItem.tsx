@@ -17,7 +17,7 @@ export default function SliderItem({ slide }: { slide: any[] }) {
   const bubbles = stack.slice(0, 5);
 
   return (
-    <div>
+    <>
       <h2 className="py-6 text-2xl font-medium">{title}</h2>
 
       <div className="flex flex-col">
@@ -34,19 +34,21 @@ export default function SliderItem({ slide }: { slide: any[] }) {
 
         <div className="flex w-full flex-wrap">
           {bubbles.map((bub: string) => (
-            <BubbleItem bubText={bub} />
+            <BubbleItem key={bub} bubText={bub} />
           ))}
         </div>
 
         {link && (
-          <Link href={link} target="_blank" className="flex justify-end py-3">
-            <span className="flex items-center underline underline-offset-8">
-              Github
-              <FiChevronRight />
-            </span>
-          </Link>
+          <div className="flex w-full justify-end">
+            <Link href={link} target="_blank" className="flex w-fit  py-3">
+              <span className="flex items-center underline underline-offset-8">
+                Github
+                <FiChevronRight />
+              </span>
+            </Link>
+          </div>
         )}
       </div>
-    </div>
+    </>
   );
 }
