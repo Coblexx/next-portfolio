@@ -5,10 +5,17 @@ import TextBlock from "@/ui/TextBlock";
 import skills from "@/skills.json";
 
 export default function SkillsPage() {
+  const styles = "max-w-md m-auto";
+
   return (
-    <div className="mb-12 flex flex-col items-center">
+    <div className="mb-12 flex flex-wrap">
       {skills.map((block) => (
-        <TextBlock key={block.id} title={block.title} text={block.text} />
+        <TextBlock
+          key={block.id}
+          styles={styles}
+          title={block.title}
+          text={block.text}
+        />
       ))}
     </div>
   );
