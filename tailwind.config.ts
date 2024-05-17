@@ -13,6 +13,7 @@ const config: Config = {
       },
       maxWidth: {
         "1/3": "33.3%",
+        "4/5": "80%",
       },
     },
     keyframes: {

@@ -28,28 +28,26 @@ export default function Slider() {
   }
 
   return (
-    <>
-      <div className="flex h-60 justify-between">
-        <button
-          className="m-6 my-auto"
-          onClick={() => {
-            handleSlideChange(true);
-          }}
-        >
-          <FiArrowLeft size={40} />
-        </button>
-        <div className="w-3/5 align-top">
-          <SliderItem slide={slide} />
-        </div>
-        <button
-          className="m-6 my-auto"
-          onClick={() => {
-            handleSlideChange();
-          }}
-        >
-          <FiArrowRight size={40} />
-        </button>
+    <div className="flex h-full w-full justify-between py-20">
+      <button
+        className="my-auto p-6"
+        onClick={() => {
+          handleSlideChange(true);
+        }}
+      >
+        <FiArrowLeft size={40} />
+      </button>
+      <div className="w-3/5 align-top">
+        <SliderItem slide={slide} />
       </div>
-    </>
+      <button
+        className="m-6 my-auto"
+        onClick={() => {
+          handleSlideChange();
+        }}
+      >
+        <FiArrowRight size={40} />
+      </button>
+    </div>
   );
 }
