@@ -12,6 +12,7 @@
 
 body {
   background-image: linear-gradient(to left, #181818, #0f1421);
+  width: 100%;
   color: white;
 }
 

@@ -11,7 +11,7 @@ export default function ContactItem({
   children: ReactNode;
 }) {
   return (
-    <div className="p-6">
+    <div className="">
       <Link
         className="py-5 text-xl underline underline-offset-2"
         target="_blank"
