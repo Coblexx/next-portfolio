@@ -11,14 +11,16 @@ export default function ContactItem({
   children: ReactNode;
 }) {
   return (
-    <div className="">
-      <Link
-        className="py-5 text-xl underline underline-offset-2"
-        target="_blank"
-        href={link}
-      >
-        {title}
-      </Link>
+    <div>
+      <div className="py-2">
+        <Link
+          className="text-xl underline underline-offset-2"
+          target="_blank"
+          href={link}
+        >
+          {title}
+        </Link>
+      </div>
       <p>{children}</p>
     </div>
   );

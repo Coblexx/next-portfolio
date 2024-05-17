@@ -17,7 +17,7 @@ export default function NavBar() {
   }
 
   return (
-    <nav className="flex h-24 justify-between">
+    <nav className="flex h-24 justify-between px-20">
       <div>
         <NavItem isOpen={false} handleClick={() => setIsOpen(false)} href="/">
           Hi I'm Radosław
