@@ -11,6 +11,9 @@ const config: Config = {
       backgroundImage: {
         hero: "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/bg-img.jpg')",
       },
+      maxWidth: {
+        "1/3": "33.3%",
+      },
     },
     keyframes: {
       rotate90: {

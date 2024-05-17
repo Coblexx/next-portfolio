@@ -4,10 +4,12 @@ import { ReactNode } from "react";
 export default function ContactItem({
   title,
   link,
+  icon,
   children,
 }: {
   title: string;
   link: string;
+  icon: ReactNode;
   children: ReactNode;
 }) {
   return (
@@ -18,7 +20,10 @@ export default function ContactItem({
           target="_blank"
           href={link}
         >
-          {title}
+          <span className="flex items-center gap-2">
+            {icon}
+            {title}
+          </span>
         </Link>
       </div>
       <p>{children}</p>
