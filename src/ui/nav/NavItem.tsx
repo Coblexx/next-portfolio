@@ -26,11 +26,10 @@ export default function NavItem({
         onClick={(e: React.MouseEvent) => handleClickRoute(e)}
         className={clsx(
           path === `/${href}` && "underline underline-offset-[10px]",
+          isOpen && href !== "/" && "w-full",
         )}
       >
-        <div className={clsx("px-10 py-3", isOpen && "w-full  text-lg")}>
-          {children}
-        </div>
+        <div className={clsx("px-10 py-3 text-xl")}>{children}</div>
       </Link>
     </li>
   );

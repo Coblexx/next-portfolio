@@ -8,6 +8,7 @@ import NavLinks from "@/ui/nav/NavLinks";
 
 // context
 import { NavContextProvider } from "@/NavContext";
+import { createPortal } from "react-dom";
 
 export default function NavBar() {
   return (
@@ -16,12 +17,12 @@ export default function NavBar() {
         <div>
           <NavItem href="/">Hi I'm Radosław</NavItem>
         </div>
-        <div className="flex grow justify-end">
+        <div className="hidden grow justify-end md:flex">
           <NavLinks />
         </div>
         <HamburgerMenu />
-        <HamburgerOptions />
       </nav>
+      {createPortal(<HamburgerOptions />, document.body)}
     </NavContextProvider>
   );
 }
