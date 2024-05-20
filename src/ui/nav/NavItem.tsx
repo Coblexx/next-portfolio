@@ -2,23 +2,21 @@ import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ReactNode } from "react";
+import { useNavContext } from "@/NavContext";
 
 export default function NavItem({
   children,
   href,
-  handleClick,
-  isOpen,
 }: {
   children: ReactNode;
   href: string;
-  handleClick: Function;
-  isOpen: boolean;
 }) {
   const path = usePathname();
+  const { isOpen, handleClose } = useNavContext();
 
   function handleClickRoute(e: React.MouseEvent): void {
     e.stopPropagation();
-    handleClick();
+    handleClose();
   }
 
   return (

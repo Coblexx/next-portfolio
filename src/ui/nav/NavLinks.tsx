@@ -7,13 +7,12 @@ import NavItem from "./NavItem";
 //data
 import routes from "../../routes.json";
 
-export default function NavLinks({
-  isOpen,
-  handleClick,
-}: {
-  isOpen: boolean;
-  handleClick: Function;
-}) {
+// context
+import { useNavContext } from "@/NavContext";
+
+export default function NavLinks() {
+  const { isOpen } = useNavContext();
+
   return (
     <ul
       className={clsx(
@@ -23,12 +22,7 @@ export default function NavLinks({
       )}
     >
       {Object.entries(routes).map(([route, title]) => (
-        <NavItem
-          handleClick={() => isOpen && handleClick()}
-          key={route}
-          href={route}
-          isOpen={isOpen}
-        >
+        <NavItem key={route} href={route}>
           {title}
         </NavItem>
       ))}
