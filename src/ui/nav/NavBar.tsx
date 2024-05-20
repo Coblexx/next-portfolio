@@ -22,7 +22,7 @@ export default function NavBar() {
         </div>
         <HamburgerMenu />
       </nav>
-      {createPortal(<HamburgerOptions />, document.body)}
+      <HamburgerOptions />
     </NavContextProvider>
   );
 }
