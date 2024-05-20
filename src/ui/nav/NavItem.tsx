@@ -1,7 +1,11 @@
-import clsx from "clsx";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { ReactNode } from "react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+
+// clsx
+import clsx from "clsx";
+
+// context
 import { useNavContext } from "@/NavContext";
 
 export default function NavItem({
