@@ -6,7 +6,7 @@ import Link from "next/link";
 import clsx from "clsx";
 
 // context
-import { useNavContext } from "@/NavContext";
+import { useNavContext } from "@/ui/nav/NavContext";
 
 export default function NavItem({
   children,

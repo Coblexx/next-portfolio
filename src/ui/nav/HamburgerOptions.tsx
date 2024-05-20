@@ -3,7 +3,7 @@ import clsx from "clsx";
 
 // components
 import NavLinks from "./NavLinks";
-import { useNavContext } from "@/NavContext";
+import { useNavContext } from "@/ui/nav/NavContext";
 
 export default function HamburgerOptions() {
   const { isOpen } = useNavContext();

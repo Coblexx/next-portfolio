@@ -7,7 +7,7 @@ import NavItem from "@/ui/nav/NavItem";
 import NavLinks from "@/ui/nav/NavLinks";
 
 // context
-import { NavContextProvider } from "@/NavContext";
+import { NavContextProvider } from "@/ui/nav/NavContext";
 import { createPortal } from "react-dom";
 
 export default function NavBar() {

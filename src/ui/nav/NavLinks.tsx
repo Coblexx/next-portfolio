@@ -8,7 +8,7 @@ import NavItem from "./NavItem";
 import routes from "../../routes.json";
 
 // context
-import { useNavContext } from "@/NavContext";
+import { useNavContext } from "@/ui/nav/NavContext";
 
 export default function NavLinks() {
   const { isOpen } = useNavContext();
