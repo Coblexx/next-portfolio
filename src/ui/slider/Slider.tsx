@@ -28,7 +28,7 @@ export default function Slider() {
   }
 
   return (
-    <div className="flex h-full w-full justify-between py-20">
+    <div className="flex w-full justify-between py-20">
       <button
         className="my-auto p-6"
         onClick={() => {
