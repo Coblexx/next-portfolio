@@ -38,14 +38,18 @@ export default function SliderItem({ slide }: { slide: any[] }) {
           ))}
         </div>
 
-        {link && (
+        {link ? (
           <div className="flex w-full justify-end">
-            <Link href={link} target="_blank" className="flex w-fit  py-3">
+            <Link href={link} target="_blank" className="flex w-fit py-3">
               <span className="flex items-center underline underline-offset-8">
                 Github
                 <FiChevronRight />
               </span>
             </Link>
+          </div>
+        ) : (
+          <div className="flex w-full justify-end">
+            <p className="py-3">Repo coming soon!</p>
           </div>
         )}
       </div>
