@@ -2,7 +2,7 @@
 import { FiMenu } from "react-icons/fi";
 
 // context
-import { useNavContext } from "@/ui/nav/NavContext";
+import { useNavContext } from "@/_ui/nav/NavContext";
 
 export default function HamburgerMenu() {
   const { handleToggle } = useNavContext();

@@ -1,4 +1,4 @@
-import Slider from "@/ui/slider/Slider";
+import Slider from "@/_ui/slider/Slider";
 
 export default function ProjectsPage() {
   return (
