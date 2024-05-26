@@ -1,13 +1,13 @@
 "use client";
 
 // components
-import HamburgerMenu from "@/_ui/nav/HamburgerMenu";
-import HamburgerOptions from "@/_ui/nav/HamburgerOptions";
-import NavItem from "@/_ui/nav/NavItem";
-import NavLinks from "@/_ui/nav/NavLinks";
+import HamburgerMenu from "@/ui/nav/HamburgerMenu";
+import HamburgerOptions from "@/ui/nav/HamburgerOptions";
+import NavItem from "@/ui/nav/NavItem";
+import NavLinks from "@/ui/nav/NavLinks";
 
 // context
-import { NavContextProvider } from "@/_ui/nav/NavContext";
+import { NavContextProvider } from "@/ui/nav/NavContext";
 
 export default function NavBar() {
   return (
