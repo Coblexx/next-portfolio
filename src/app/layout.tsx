@@ -5,8 +5,11 @@ import { Sora } from "next/font/google";
 const sora = Sora({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "My portfolio",
-  description: "New portfolio created using NextJS",
+  title: {
+    template: "%s - Radosław Głogowski",
+    default: "My portfolio - Radosław Głogowski",
+  },
+  description: "My portfolio created using NextJS",
 };
 
 // css

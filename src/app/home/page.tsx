@@ -1,3 +1,6 @@
+// next
+import { Metadata } from "next";
+
 // components
 import HeroSection from "@/ui/HeroSection";
 import TextBlock from "@/ui/TextBlock";
@@ -7,6 +10,10 @@ import { FaLinkedin } from "react-icons/fa";
 
 // data
 import about from "@/about.json";
+
+export const metadata: Metadata = {
+  title: "Home",
+};
 
 export default function HomePage() {
   const { title, text } = about;

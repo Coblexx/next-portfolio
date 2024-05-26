@@ -1,8 +1,15 @@
+// next
+import { Metadata } from "next";
+
 // components
 import TextBlock from "@/ui/TextBlock";
 
 // data
 import skills from "@/skills.json";
+
+export const metadata: Metadata = {
+  title: "Skills",
+};
 
 export default function SkillsPage() {
   const styles = "max-w-md m-auto";
