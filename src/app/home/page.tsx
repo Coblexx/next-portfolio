@@ -1,7 +1,7 @@
 // components
-import HeroSection from "@/_ui/HeroSection";
-import TextBlock from "@/_ui/TextBlock";
-import ContactItem from "@/_ui/contact/ContactItem";
+import HeroSection from "@/ui/HeroSection";
+import TextBlock from "@/ui/TextBlock";
+import ContactItem from "@/ui/contact/ContactItem";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 

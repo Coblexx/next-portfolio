@@ -1,5 +1,5 @@
 // components
-import TextBlock from "@/_ui/TextBlock";
+import TextBlock from "@/ui/TextBlock";
 
 // data
 import skills from "@/skills.json";
