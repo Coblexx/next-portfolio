@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={sora.className}>
+      <body className={sora.className + " min-h-full"}>
         <NavBar />
         {children}
         <Footer />

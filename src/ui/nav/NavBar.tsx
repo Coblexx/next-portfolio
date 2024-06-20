@@ -13,7 +13,7 @@ export default function NavBar() {
   return (
     <NavContextProvider>
       <nav className="flex h-24 justify-between px-20">
-        <div>
+        <div className="flex w-full justify-center">
           <NavItem href="/">Hi I'm Radosław</NavItem>
         </div>
         <div className="hidden grow justify-end md:flex">
